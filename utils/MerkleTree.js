@@ -12,6 +12,7 @@ class MerkleTree {
   }
 
   getProof(index, layer = this.leaves, proof = []) {
+    
     if (layer.length === 1) {
       return proof;
     }
@@ -36,7 +37,7 @@ class MerkleTree {
         }
       }
     }
-
+   
     return this.getProof(
       Math.floor(index / 2),
       newLayer,
